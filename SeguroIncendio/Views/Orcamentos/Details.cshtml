@@ -1,0 +1,179 @@
+﻿@model SeguroIncendio.Models.Orcamento
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Orcamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoImovel.TipoImovelDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoImovel.TipoImovelDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inquilino)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inquilino)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoInquilino)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoInquilino)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CpfCnpjInquilino)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CpfCnpjInquilino)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Proprietario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proprietario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoProprietario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoProprietario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CpfCnpjProprietario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CpfCnpjProprietario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CEP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CEP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Complemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Complemento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorAluguel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorAluguel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImportCobertIncendio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImportCobertIncendio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PremioCobertIncendio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PremioCobertIncendio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImportCobertPerda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImportCobertPerda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PremioCobertPerda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PremioCobertPerda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdentificacaoCategoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdentificacaoCategoria)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrcamentoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<SeguroIncendio.Models.Orcamento>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    WebGrid GridModel = new WebGrid(source: Model, canPage: true, canSort: true, rowsPerPage: 10);
+    //GridModel.Pager(WebGridPagerModes.NextPrevious, previousText:"Anterior", nextText: "Próximo");
+}
+
+<h2>Orçamentos</h2>
+
+<p>
+    @Html.ActionLink("Novo Orçamento", "Create")
+</p>
+
+<div class="table-responsive">
+    @GridModel.GetHtml(
+        mode: WebGridPagerModes.NextPrevious, previousText: "Anterior", nextText: "Próximo",
+        tableStyle: "table table-striped table-bordered table-hover",
+        columns: new[] {
+            GridModel.Column("OrcamentoId", "Código"),
+            GridModel.Column("Inquilino"),
+            GridModel.Column("Proprietario", "Proprietário"),
+            GridModel.Column("CEP"),
+            GridModel.Column("Endereco", "Endereço"),
+            GridModel.Column("Numero", "Número"),
+            GridModel.Column("Bairro"),
+            GridModel.Column("Cidade"),
+            GridModel.Column("Estado"),
+            GridModel.Column("Select", header: "Selecionar", format:(item) => Html.ActionLink("Detalhes", "Details", new { id = item.OrcamentoId }))
+        }
+    )
+</div>
